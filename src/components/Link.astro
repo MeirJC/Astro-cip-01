@@ -5,3 +5,17 @@ const { href } = Astro.props;
 <a href={href}>
   <slot />
 </a>
+
+<style>
+  a {
+    color: crimson;
+    font-size: 1.5rem;
+  }
+</style>
+
+<script>
+  const linkElement = document.querySelector('a');
+  linkElement.addEventListener('click', () => {
+  alert('clicked link');
+  });
+</script>
